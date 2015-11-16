@@ -1,6 +1,10 @@
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Genera una cola de 5 posiciones que trabaja con un array de enteros
+ * Dispone de diferentes metodos para trbajar con ella
+ */
 public class Cola {
 
     private static int[] vector;
@@ -10,6 +14,11 @@ public class Cola {
         vector = new int[5];
     }
 
+    /**
+     * Genera la cola, muestra los valores y te dice
+     * el valor maximo y minimo que hay en la pila
+     * Tambien pide un valor que sera buscado en el vector de enteros
+     */
     public static void crearCola(){
         Random rnd = new Random();
 
@@ -27,6 +36,10 @@ public class Cola {
 
     }
 
+    /**
+     * quita de la cola los enteros segun funcionamiento FIFO
+     * (firts in first out)
+     */
     public static void quitarDeLaCola(){
         //int indice = vector.length - 1;
         System.out.println("----QUITAR DE LA COLA----:");
@@ -40,6 +53,9 @@ public class Cola {
         }
     }
 
+    /**
+     * Informa del valor minimo que hay en la pila
+     */
     public static void valorMinimo(){
         int aux = vector[0];
 
@@ -51,6 +67,9 @@ public class Cola {
         System.out.println("Valor MINIMO de la cola: " + aux);
     }
 
+    /**
+     * Informa del valor maximo que hay en la pila
+     */
     public static void valorMaximo(){
         int aux = vector[0];
 
@@ -62,6 +81,9 @@ public class Cola {
         System.out.println("Valor MAXIMO de la cola: " + aux);
     }
 
+    /**
+     * busca un valor entre la pila
+     */
     public static void buscar(){
         boolean flag = false;
         Scanner input = new Scanner(System.in);

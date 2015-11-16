@@ -38,10 +38,11 @@ public class ColaPila {
 
 
 
-
-
-
     }
 
 
 }
+
+/*OBS:
+Me ha sido imposible entenderme con las clases genericas
+*/

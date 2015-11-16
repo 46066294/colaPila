@@ -2,23 +2,22 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Ejercicios Clases Genéricas
- 1. Crear una pila y cola , además de las siguientes funciones:
- ? Calcular el elemento mínimo de un array;
- ? Calcular el elemento máximo de un array;
- ? Buscar un Objeto en un array, devolviendo la posición de la primera aparición del Objeto en el array o -1 si no existe.
- 2. Crear una pila y cola genéricas.
+ * Genera una pila de 5 posiciones que trabaja con un array de enteros
+ * Dispone de diferentes metodos para trbajar con ella
  */
 public class Pila {
 
-    private static int[] vector;
+    private static int[] vector = new int[5];
 
     //constr
-    public Pila(){
-        vector = new int[5];
-    }
+    public Pila(){}
 
-    public static void apilar(){
+    /**
+     * Genera la pila, muestra los valores y te dice
+     * el valor maximo y minimo que hay en la pila
+     * Tambien pide un valor que sera buscado en el vector de enteros
+     */
+    public void apilar(){
         Random rnd = new Random();
 
         //se crea la cola/Pila con numeros aleatorios
@@ -34,6 +33,10 @@ public class Pila {
 
     }
 
+    /**
+     * desapila los enteros segun funcionamiento LIFO
+     * (last in first out)
+     */
     public static void desApilar(){
         int indice = vector.length - 1;
         System.out.println("----DESAPILAR----:");
@@ -47,6 +50,9 @@ public class Pila {
         }
     }
 
+    /**
+     * Informa del valor minimo que hay en la pila
+     */
     public static void valorMinimo(){
         int aux = vector[0];
 
@@ -58,6 +64,9 @@ public class Pila {
         System.out.println("Valor MINIMO de la pila: " + aux);
     }
 
+    /**
+     * Informa del valor maximo que hay en la pila
+     */
     public static void valorMaximo(){
         int aux = vector[0];
 
@@ -69,6 +78,9 @@ public class Pila {
         System.out.println("Valor MAXIMO de la pila: " + aux);
     }
 
+    /**
+     * busca un valor entre la pila
+     */
     public static void buscar(){
         boolean flag = false;
         Scanner input = new Scanner(System.in);
@@ -96,4 +108,3 @@ public class Pila {
     }
 
 }
-
